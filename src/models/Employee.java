@@ -1,3 +1,4 @@
+
 package models;
 
 import java.sql.Timestamp;
@@ -33,11 +34,11 @@ import javax.persistence.Table;
 @Entity
 public class Employee {
     @Id
-    @Column(name = "Id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "code", nullable = false, unique = false)
+    @Column(name = "code", nullable = false, unique = true)
     private String code;
 
     @Column(name = "name", nullable = false)
@@ -121,5 +122,4 @@ public class Employee {
     public void setDelete_flag(Integer delete_flag) {
         this.delete_flag = delete_flag;
     }
-
 }
